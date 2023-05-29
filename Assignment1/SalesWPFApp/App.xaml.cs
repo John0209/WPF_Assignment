@@ -26,12 +26,14 @@ namespace SalesWPFApp
             services.AddSingleton(typeof(IProductRepository), typeof(ProductRepository));
             services.AddSingleton<MainWindow>();
             services.AddSingleton<HomePage>();
+            services.AddSingleton<LoginForm>();
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {
             var mainWindow=serviceProvider.GetService<MainWindow>();
             var homePage=serviceProvider.GetService<HomePage>();
-            homePage.Show();
+            var loginPage = serviceProvider.GetService<LoginForm>();
+            loginPage.Show();
         }
     }
 }

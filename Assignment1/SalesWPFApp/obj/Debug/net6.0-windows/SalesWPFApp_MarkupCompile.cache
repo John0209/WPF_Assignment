@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Code C#\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\
+D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\
 SalesWPFApp
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\Code C#\Assignment1\SalesWPFApp\App.xaml
-21369579645
+D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\App.xaml
+41964887688
 
-4-1990053909
-224-485298467
-MainWindow.xaml;Product.xaml;
+6-732781155
+226851266811
+HomePage.xaml;LoginForm.xaml;MainWindow.xaml;Product.xaml;
 
 False
 

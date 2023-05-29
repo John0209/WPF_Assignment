@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\App.xaml
-3-48489063
+41964887688
 
-71416407787
+81262530346
 226851266811
-HomePage.xaml;MainWindow.xaml;Product.xaml;
+HomePage.xaml;LoginForm.xaml;MainWindow.xaml;Product.xaml;
 
-False
+True
 
