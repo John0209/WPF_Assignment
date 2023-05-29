@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7vyS7CBssimQOLPARH5dTjR0RcOMAyAupDxx8Q8hcdXj431Dp0kmMswB3Z1SxITodMAb3SHEBJ5MZfbrN6YJQg==",
+  "dgSpecHash": "q27sG2VoH9cP/DLifzmF4VWwWJxzFGKjPFJRUJexWb1q0OL54/WHMR52/9DDuFsCltM5H8OE3U1b7OOVxFj4Tg==",
   "success": true,
-  "projectFilePath": "D:\\Code C#\\Assignment1\\SalesWPFApp\\SalesWPFApp.csproj",
+  "projectFilePath": "D:\\Code C#\\WPF_Assignment\\Assignment1\\SalesWPFApp\\SalesWPFApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VU\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\VU\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XfDEarVK/09qe9gleRf3jAbO1QImf3pfUTwMfMD2yBOTONRpN/rhhymDCEeGzFSdK6Lee2l0PGHShyaeqhniPg==",
+  "dgSpecHash": "njR9QUSxUzcqfEXqu+VgUTWBECoKeQSCzPR9JIfAOOUEldBoac+Cqe59pETMh4t6LKNhrQBwnXS1bYGzsMfoMQ==",
   "success": true,
-  "projectFilePath": "D:\\Code C#\\Assignment1\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "D:\\Code C#\\WPF_Assignment\\Assignment1\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VU\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\VU\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
