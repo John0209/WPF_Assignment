@@ -112,15 +112,12 @@ D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\bin\Debug\net6.0-windows\DataA
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\bin\Debug\net6.0-windows\BussinessObject.pdb
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\bin\Debug\net6.0-windows\DataAccess.pdb
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\SalesWPFApp.csproj.AssemblyReference.cache
-D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\App.baml
-D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\HomePage.g.cs
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\LoginForm.g.cs
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\Product.g.cs
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\App.g.cs
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\SalesWPFApp_MarkupCompile.cache
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\SalesWPFApp_MarkupCompile.lref
-D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\HomePage.baml
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\LoginForm.baml
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\MainWindow.baml
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\Product.baml
@@ -135,3 +132,4 @@ D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\refin
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\SalesWPFApp.pdb
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\SalesWPFApp.genruntimeconfig.cache
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\ref\SalesWPFApp.dll
+D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\App.baml
