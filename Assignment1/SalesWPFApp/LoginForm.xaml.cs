@@ -55,7 +55,7 @@ namespace SalesWPFApp
             string password = txtPass.Password;
             if (_member.CheckLogin(account, password))
             {
-                var pr = new Product(_product);
+                var pr = new ProductForm(_product);
                 pr.Show();
             }
             else

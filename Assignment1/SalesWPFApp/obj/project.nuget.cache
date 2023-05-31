@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "q27sG2VoH9cP/DLifzmF4VWwWJxzFGKjPFJRUJexWb1q0OL54/WHMR52/9DDuFsCltM5H8OE3U1b7OOVxFj4Tg==",
+  "dgSpecHash": "jWPjEjOomZAiIzhkd+QpBTYSL/gjqpveesyb45C/RMjCVyAW5R5sbrbB9KJvOPBAam29dMYPSfZvzsmOoJdwiA==",
   "success": true,
   "projectFilePath": "D:\\Code C#\\WPF_Assignment\\Assignment1\\SalesWPFApp\\SalesWPFApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VU\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\VU\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\VU\\.nuget\\packages\\fontawesome.sharp\\6.3.0\\fontawesome.sharp.6.3.0.nupkg.sha512",
     "C:\\Users\\VU\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.11.0\\mahapps.metro.iconpacks.material.4.11.0.nupkg.sha512",
     "C:\\Users\\VU\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\VU\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

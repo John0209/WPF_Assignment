@@ -175,6 +175,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "FontAwesome.Sharp": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
             "MahApps.Metro.IconPacks.Material": {
               "target": "Package",
               "version": "[4.11.0, )"

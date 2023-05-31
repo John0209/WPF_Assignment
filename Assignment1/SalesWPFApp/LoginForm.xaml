@@ -104,7 +104,7 @@
                     <!--user-->
                     <TextBlock Text="Username" Foreground="DarkGray" FontSize="12" FontWeight="Medium"
                                FontFamily="Montserrat" Margin="0,35,0,10"/>
-                    <Label Margin="0,0,220,0" Style="{StaticResource topButton}">
+                    <Label Margin="0,0,220,0" Style="{StaticResource colorButton}">
                         <Icon:PackIconMaterial Kind="Account" Width="15" Height="15"/>
                     </Label>
                     <TextBox x:Name="txtUser" Foreground="White" FontSize="13" FontWeight="Medium"
@@ -115,7 +115,7 @@
                     <!--password-->
                     <TextBlock Text="Password" Foreground="DarkGray" FontSize="12" FontWeight="Medium"
                                FontFamily="Montserrat" Margin="0,30,0,10"/>
-                    <Label Margin="0,0,220,0" Style="{StaticResource topButton}">
+                    <Label Margin="0,0,220,0" Style="{StaticResource colorButton}">
                                 <Icon:PackIconMaterial Kind="Key" Width="15" Height="15"/>
                     </Label>
                     <PasswordBox x:Name="txtPass" Foreground="White" FontSize="13" FontWeight="Medium"
