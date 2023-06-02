@@ -13,6 +13,7 @@ namespace DataAccess.Repositories
         public Product? GetProductById(int id);
         public bool AddProduct(Product product);
         public bool DeleteProduct(Product product);
-        public bool UpdateProduct(Product product);
+        public bool UpdateProduct(Product product,bool mask);
+        public IEnumerable<Product> SearchProduct(string name);
     }
 }

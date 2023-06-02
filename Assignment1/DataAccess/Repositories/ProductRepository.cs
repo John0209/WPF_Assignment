@@ -17,7 +17,10 @@ namespace DataAccess.Repositories
 
         public Product? GetProductById(int id) => ProductDAO.Instance.GetProductById(id);
 
-        public bool UpdateProduct(Product product)=> ProductDAO.Instance.UpdateProduct(product);
+        public IEnumerable<Product> SearchProduct(string name) => ProductDAO.Instance.SearchProduct(name);
+
+        public bool UpdateProduct(Product product,bool mask)=> ProductDAO.Instance.UpdateProduct(product,mask);
+
         
     }
 }

@@ -13,6 +13,9 @@
     <Compile Update="LoginForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MemberForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="NodifyForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MemberForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="NodifyForm.xaml">

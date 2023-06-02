@@ -195,12 +195,14 @@
                     <!--Button Function-->
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         
-                        <Button x:Name="btnAdd" Style="{StaticResource controlButton}" Background="DarkKhaki"
+                        <Button x:Name="btnAdd" Style="{StaticResource controlButton}" Background="Tomato"
                                 Width="70" Height="20" Grid.Column="0" Click="btnAdd_Click"  >
                             <fa:IconImage Icon="Add" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
                         </Button>
@@ -214,6 +216,20 @@
                                Width="70" Height="20" Grid.Column="2" Click="btnDelete_Click">
                             <fa:IconImage Icon="Trash" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
                         </Button>
+
+                        <Button x:Name="btnLoad" Style="{StaticResource controlButton}" Background="DarkTurquoise"
+                               Width="70" Height="20" Grid.Column="3" Click="btnLoad_Click">
+                            <fa:IconImage Icon="ArrowRotateLeft" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
+                        </Button>
+
+                        <StackPanel  Grid.Column="4">
+                            <TextBox  Background="Wheat" FontSize="14" Margin="0,5,98,0" Width="270" Height="20" Foreground="#1d114e"
+                                      FontFamily="Montserrat" FontWeight="Medium" BorderBrush="#DA34AE" BorderThickness="2" x:Name="txtSearch"/>
+                            <Button x:Name="btnSearch" Style="{StaticResource controlButton}" Background="Violet"
+                               Width="50" Height="20" Grid.Column="3" Click="btnSearch_Click" Margin="340,-20,98,0">
+                                <fa:IconImage Icon="Search" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
+                            </Button>
+                        </StackPanel>
                     </Grid>
                     <!--Text để dẫn-->
                     <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
@@ -250,6 +266,12 @@
                           x:Name="txt_UnitStock" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
                               FontSize="5" BorderBrush="#231457"
                              Text="{Binding Path=UnitslnStock, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_Status" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=Status, Mode=OneWay}"
                         DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
 
                 </Grid>

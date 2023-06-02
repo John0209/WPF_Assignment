@@ -92,6 +92,7 @@ public partial class FstoreContext : DbContext
                 .HasMaxLength(40)
                 .IsUnicode(false);
             entity.Property(e => e.UnitPrice).HasColumnType("money");
+            entity.Property(e => e.Status).HasColumnType("bit");
             entity.Property(e => e.Weight)
                 .HasMaxLength(20)
                 .IsUnicode(false);

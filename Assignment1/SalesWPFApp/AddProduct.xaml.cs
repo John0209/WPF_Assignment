@@ -38,7 +38,7 @@ namespace SalesWPFApp
             {
                 formPr.LoadListProduct();
                 var formNf = new NodifyForm();
-                formNf.textNodify($"Add {product.ProductName} Successfully!");
+                formNf.textNodify($"Add {product.ProductName} Success, Please Reload!");
                 formNf.Show();
             }
            

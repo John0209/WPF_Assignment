@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Runtime.InteropServices;
 using System.Runtime;
 using DataAccess.DataAccess;
+using Microsoft.IdentityModel.Tokens;
 
 namespace SalesWPFApp
 {
@@ -24,7 +25,7 @@ namespace SalesWPFApp
     public partial class ProductForm : Window
     {
         IProductRepository _product;
-        
+        Product pr;
         //Product m_product;
         public ProductForm(IProductRepository product)
         {
@@ -94,23 +95,52 @@ namespace SalesWPFApp
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             UpdateProduct m_updatePr= new UpdateProduct(_product);
-            Product pr= new Product();
-            //get data
-            pr.ProductId=int.Parse(txt_ProductId.Text);
-            pr.ProductName=txt_ProductName.Text;
-            pr.CategoryId= int.Parse(txt_Category.Text);
-            pr.Weight=txt_Weight.Text;
-            pr.UnitPrice=decimal.Parse(txt_UnitPrice.Text); 
-            pr.UnitslnStock= int.Parse(txt_UnitStock.Text);
+            GetDataProduct();
             //excute
-            m_updatePr.GetProductInfor(pr);
+            m_updatePr.GetProductInforDisplay(pr);
             m_updatePr.Show();
         }
-
+        private void GetDataProduct()
+        {
+            pr = new Product();
+            //get data
+            pr.ProductId = int.Parse(txt_ProductId.Text);
+            pr.ProductName = txt_ProductName.Text;
+            pr.CategoryId = int.Parse(txt_Category.Text);
+            pr.Weight = txt_Weight.Text;
+            pr.UnitPrice = decimal.Parse(txt_UnitPrice.Text);
+            pr.UnitslnStock = int.Parse(txt_UnitStock.Text);
+            pr.Status = Boolean.Parse(txt_Status.Text);
+        }
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-           
+            GetDataProduct();
+            if (_product.UpdateProduct(pr, false))
+            {
+                var formNf = new NodifyForm();
+                formNf.textNodify($"Delete {pr.ProductName} Success, Please Reload!");
+                formNf.Show();
+            }
         }
 
+        private void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
+            LoadListProduct();
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            var pr = _product.SearchProduct(txtSearch.Text);
+            if(pr.IsNullOrEmpty())
+            {
+                var formNf = new NodifyForm();
+                formNf.textNodify($"{txtSearch.Text} does not exist!");
+                formNf.Show();
+            }
+            else
+            {
+                lvProduct.ItemsSource = pr;
+            }
+        }
     }
 }

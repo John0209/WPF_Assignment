@@ -34,7 +34,8 @@ namespace DataAccess
             var result = _context.Products.ToList();
             if (result.Count > 0)
             {
-                return result;
+                var listProduct= from p in result where p.Status==true select p;
+                return listProduct;
             }
             return null;
         }
@@ -59,6 +60,7 @@ namespace DataAccess
                 pr.Weight = product.Weight;
                 pr.UnitPrice = product.UnitPrice;
                 pr.UnitslnStock= product.UnitslnStock;
+                pr.Status = true;
                 _context.Products.Add(pr);
                 var number= _context.SaveChanges();
                 if(number>0)
@@ -66,21 +68,28 @@ namespace DataAccess
             }
             return false;
         }
-        public bool UpdateProduct(Product product)
+        public bool UpdateProduct(Product product,bool mask)
         {
             var id = product.ProductId;
             var check = GetProductById(id);
             if (check != null)
             {
-                check.CategoryId=product.CategoryId;
-                check.ProductName = product.ProductName;
-                check.Weight = product.Weight;
-                check.UnitPrice = product.UnitPrice;
-                check.UnitslnStock= product.UnitslnStock;
-                _context.Products.Update(check);
-                var number = _context.SaveChanges();
-                if (number > 0)
-                    return true;
+                if (mask)
+                {
+                    check.CategoryId = product.CategoryId;
+                    check.ProductName = product.ProductName;
+                    check.Weight = product.Weight;
+                    check.UnitPrice = product.UnitPrice;
+                    check.UnitslnStock = product.UnitslnStock;
+                }
+                else
+                {
+                    check.Status = false;
+                }
+                    _context.Products.Update(check);
+                    var number = _context.SaveChanges();
+                    if (number > 0)
+                        return true;
             }
             return false;
         }
@@ -92,6 +101,12 @@ namespace DataAccess
                 return result;
             }
             return null;
+        }
+        public IEnumerable<Product> SearchProduct(string name)
+        {
+           var productList= GetProductAsync();
+           var list=from p in productList where p.ProductName == name select p;
+            return list;
         }
     }
 }

@@ -32,16 +32,16 @@ namespace SalesWPFApp
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            product_Update = GetProductUpdate();
-           if(m_product.UpdateProduct(product_Update))
+            product_Update = GetDataProductUpdate();
+           if(m_product.UpdateProduct(product_Update,true))
             {
                 var formNf = new NodifyForm();
-                formNf.textNodify($"Update {product_Update.ProductName} Successfully!");
+                formNf.textNodify($"Update {product_Update.ProductName} Success, Please Reload!");
                 formNf.Show();
             }
         }
 
-        public void GetProductInfor(Product product)
+        public void GetProductInforDisplay(Product product)
         {
             m_productId = product.ProductId;
             txtCateId.Text = product.CategoryId.ToString();
@@ -50,7 +50,7 @@ namespace SalesWPFApp
             txtUnitslnStock.Text = product.UnitslnStock.ToString();
             txtWeight.Text = product.Weight;
         }
-        private Product GetProductUpdate()
+        private Product GetDataProductUpdate()
         {
             Product pr = null;
             try
@@ -76,4 +76,5 @@ namespace SalesWPFApp
             Close();
         }
     }
+
 }

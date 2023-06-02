@@ -43,7 +43,7 @@
                         <GradientStop Color="#231457" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <TextBlock Text="Add Successfully!" Foreground="DarkOrange" FontSize="25" FontWeight="Medium"
+                <TextBlock Text="Add Successfully!" Foreground="DarkOrange" FontSize="18" FontWeight="Medium"
                                FontFamily="Montserrat" Margin="0,35,0,10" HorizontalAlignment="Center" x:Name="txtNodify"/>
             </Border>
 
@@ -70,7 +70,7 @@
                     </Button.Style>
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border Width="100" Height="30" CornerRadius="20" Background="{TemplateBinding Background}">
+                            <Border Width="90" Height="27" CornerRadius="20" Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>

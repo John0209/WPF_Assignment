@@ -16,6 +16,7 @@ public partial class Product
     public decimal? UnitPrice { get; set; }
 
     public int? UnitslnStock { get; set; }
+    public bool Status { get;set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 }
