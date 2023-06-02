@@ -43,7 +43,9 @@ namespace DataAccess
             if (product != null)
             {
                 _context.Products.Remove(product);
-                return true;
+                var number = _context.SaveChanges();
+                if (number > 0)
+                    return true;
             }
             return false;
         }
@@ -51,7 +53,15 @@ namespace DataAccess
         {
             if (product != null)
             {
-                _context.Products.Add(product);
+                var pr=new Product();
+                pr.CategoryId = product.CategoryId;
+                pr.ProductName= product.ProductName;
+                pr.Weight = product.Weight;
+                pr.UnitPrice = product.UnitPrice;
+                pr.UnitslnStock= product.UnitslnStock;
+                _context.Products.Add(pr);
+                var number= _context.SaveChanges();
+                if(number>0)
                 return true;
             }
             return false;
@@ -62,12 +72,15 @@ namespace DataAccess
             var check = GetProductById(id);
             if (check != null)
             {
+                check.CategoryId=product.CategoryId;
                 check.ProductName = product.ProductName;
                 check.Weight = product.Weight;
                 check.UnitPrice = product.UnitPrice;
                 check.UnitslnStock= product.UnitslnStock;
                 _context.Products.Update(check);
-                return true;
+                var number = _context.SaveChanges();
+                if (number > 0)
+                    return true;
             }
             return false;
         }

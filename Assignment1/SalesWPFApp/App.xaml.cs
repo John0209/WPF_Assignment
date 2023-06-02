@@ -27,13 +27,17 @@ namespace SalesWPFApp
             services.AddSingleton<LoginForm>();
             services.AddSingleton<ProductForm>();
             services.AddSingleton<AddProduct>();
+            services.AddSingleton<NodifyForm>();
+            services.AddSingleton<UpdateProduct>();
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {
             var loginPage = serviceProvider.GetService<LoginForm>();
             var productPage = serviceProvider.GetService<ProductForm>();
             var addPage = serviceProvider.GetService< AddProduct>();
-            addPage.Show();
+            var nodifyPage = serviceProvider.GetService<NodifyForm>();
+            var updatePage = serviceProvider.GetService<UpdateProduct>();
+            productPage.Show();
         }
 
     }

@@ -24,13 +24,15 @@ namespace SalesWPFApp
     public partial class ProductForm : Window
     {
         IProductRepository _product;
+        
+        //Product m_product;
         public ProductForm(IProductRepository product)
         {
             InitializeComponent();
             _product = product;
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
         }
-
+      
         private void pnlControlBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
@@ -44,6 +46,7 @@ namespace SalesWPFApp
         private void btnProduct_Checked(object sender, RoutedEventArgs e)
         {
             LoadListProduct();
+
         }
         public void LoadListProduct()
         {
@@ -84,17 +87,30 @@ namespace SalesWPFApp
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            var m_add = new AddProduct(_product);
+            m_add.Show();
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-
+            UpdateProduct m_updatePr= new UpdateProduct(_product);
+            Product pr= new Product();
+            //get data
+            pr.ProductId=int.Parse(txt_ProductId.Text);
+            pr.ProductName=txt_ProductName.Text;
+            pr.CategoryId= int.Parse(txt_Category.Text);
+            pr.Weight=txt_Weight.Text;
+            pr.UnitPrice=decimal.Parse(txt_UnitPrice.Text); 
+            pr.UnitslnStock= int.Parse(txt_UnitStock.Text);
+            //excute
+            m_updatePr.GetProductInfor(pr);
+            m_updatePr.Show();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
+
     }
 }

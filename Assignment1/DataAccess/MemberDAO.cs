@@ -42,7 +42,9 @@ public class MemberDAO
         if(member != null)
         {
            _context.Members.Remove(member);
-            return true;
+            var number = _context.SaveChanges();
+            if (number > 0)
+                return true;
         }
         return false;
     }
@@ -51,7 +53,9 @@ public class MemberDAO
         if(member != null)
         {
             _context.Members.Add(member);
-            return true;
+            var number = _context.SaveChanges();
+            if (number > 0)
+                return true;
         }
         return false;
     }
@@ -67,7 +71,9 @@ public class MemberDAO
             checkMember.Country= member.Country;
             checkMember.Password= member.Password;
             _context.Members.Update(checkMember);
-            return true;
+            var number = _context.SaveChanges();
+            if (number > 0)
+                return true;
         }
         return false;
     }

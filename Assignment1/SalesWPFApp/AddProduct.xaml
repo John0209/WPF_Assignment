@@ -6,7 +6,7 @@
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:SalesWPFApp" xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
-        Title="ProductForm" Height="650" Width="500" WindowStartupLocation="CenterScreen"
+        Title="AddForm" Height="650" Width="500" WindowStartupLocation="CenterScreen"
         WindowStyle="None" Background="Transparent" AllowsTransparency="True">
     
         <Border CornerRadius="10" BorderThickness="1" >
@@ -27,21 +27,21 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <Border CornerRadius="10,0,0,10" Grid.Row="0">
+            <Border CornerRadius="10,10,0,0" Grid.Row="0">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
                         <GradientStop Color="#281663" Offset="0"/>
                         <GradientStop Color="#231457" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <Button x:Name="btnClose"  HorizontalAlignment="Right" Margin="0,0,0,0" 
+                <Button x:Name="btnClose"  HorizontalAlignment="Right" Margin="0,0,4,0" 
                                 Tag="PaleVioletRed" Click="btnClose_Click" Background="Transparent" BorderBrush="DarkOrange">
                     <fa:IconImage Icon="Xmark" Style="{StaticResource closeX}"/>
                 </Button>
             </Border>
 
 
-            <Border CornerRadius="10,0,0,10" Grid.Row="1">
+            <Border CornerRadius="0,0,0,0" Grid.Row="1">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
                     <GradientStop Color="#281663" Offset="0"/>
@@ -52,7 +52,7 @@
                                FontFamily="Montserrat" Margin="0,35,0,10" HorizontalAlignment="Center"/>
             </Border>
             
-            <Border CornerRadius="0,10,10,0" Grid.Row="2">
+            <Border CornerRadius="0,0,10,10" Grid.Row="2">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
                         <GradientStop Color="#0a0441" Offset="0"/>
@@ -66,10 +66,11 @@
                     <Label Margin="0,0,270,0" Style="{StaticResource colorButton}">
                         <Icon:PackIconMaterial Kind="IdCard" Width="20" Height="20"/>
                     </Label>
-                    <TextBox x:Name="txtUser" Foreground="White" FontSize="25" FontWeight="Medium"
+                    <TextBox x:Name="txtCateId" Foreground="White" FontSize="25" FontWeight="Medium"
                                FontFamily="Montserrat" Margin="0,-30,0,0" Padding="35,0,0,0" 
                              CaretBrush="LightGray" BorderBrush="DarkGray" BorderThickness="0,0,0,1"
-                             Height="30" VerticalAlignment="Center" Background="Transparent" Text="Category Id">
+                             Height="30" VerticalAlignment="Center" Background="Transparent" 
+                             >
                     </TextBox>
                     <!--Product Name-->
                     <TextBlock Text="Product Name" Foreground="DarkGray" FontSize="15" FontWeight="Medium"
@@ -80,7 +81,7 @@
                     <TextBox x:Name="txtProductName" Foreground="White" FontSize="25" FontWeight="Medium"
                                FontFamily="Montserrat" Margin="0,-30,0,0" Padding="35,0,0,0" 
                              CaretBrush="LightGray" BorderBrush="DarkGray" BorderThickness="0,0,0,1"
-                             Height="30" VerticalAlignment="Center" Background="Transparent" Text="Product Name">
+                             Height="30" VerticalAlignment="Center" Background="Transparent" >
                     </TextBox>
                     <!--C[Weight]-->
                     <TextBlock Text="Weight" Foreground="DarkGray" FontSize="15" FontWeight="Medium"
@@ -91,7 +92,7 @@
                     <TextBox x:Name="txtWeight" Foreground="White" FontSize="25" FontWeight="Medium"
                                FontFamily="Montserrat" Margin="0,-30,0,0" Padding="35,0,0,0" 
                              CaretBrush="LightGray" BorderBrush="DarkGray" BorderThickness="0,0,0,1"
-                             Height="30" VerticalAlignment="Center" Background="Transparent" Text="Weight">
+                             Height="30" VerticalAlignment="Center" Background="Transparent" >
                     </TextBox>
                     <!--[UnitPrice]-->
                     <TextBlock Text="UnitPrice" Foreground="DarkGray" FontSize="15" FontWeight="Medium"
@@ -102,7 +103,7 @@
                     <TextBox x:Name="txtUnitPrice" Foreground="White" FontSize="25" FontWeight="Medium"
                                FontFamily="Montserrat" Margin="0,-30,0,0" Padding="35,0,0,0" 
                              CaretBrush="LightGray" BorderBrush="DarkGray" BorderThickness="0,0,0,1"
-                             Height="30" VerticalAlignment="Center" Background="Transparent" Text="UnitPrice">
+                             Height="30" VerticalAlignment="Center" Background="Transparent">
                     </TextBox>
                     <!--[UnitslnStock]-->
                     <TextBlock Text="UnitslnStock" Foreground="DarkGray" FontSize="15" FontWeight="Medium"
@@ -113,7 +114,7 @@
                     <TextBox x:Name="txtUnitslnStock" Foreground="White" FontSize="25" FontWeight="Medium"
                                FontFamily="Montserrat" Margin="0,-30,0,0" Padding="35,0,0,0" 
                              CaretBrush="LightGray" BorderBrush="DarkGray" BorderThickness="0,0,0,1"
-                             Height="30" VerticalAlignment="Center" Background="Transparent" Text="UnitslnStock">
+                             Height="30" VerticalAlignment="Center" Background="Transparent" >
                     </TextBox>
                     <!--login button-->
                     <Button x:Name="btnAdd"  BorderThickness="0" Content="ADD"

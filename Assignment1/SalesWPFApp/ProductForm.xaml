@@ -25,7 +25,7 @@
                 <!--Content section-->
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+
             <!--Navigation menu-->
             <Border CornerRadius="10,0,0,10" Grid.Column="0">
                 <Border.Background>
@@ -119,15 +119,76 @@
                         </DataGrid.Columns>
                     </DataGrid>-->
                     <ListView Grid.Row="3" x:Name="lvProduct" Background="Transparent" FontSize="14" FontWeight="Medium"
-                              FontFamily="Montserrat" HorizontalAlignment="Center" >
-                        <ListView.View>
+                              FontFamily="Montserrat" HorizontalAlignment="Center" Margin="10" BorderThickness="2" BorderBrush="#462AD8"
+                              >
+
+                        <ListView.View >
                             <GridView>
-                                <GridViewColumn Header="Product ID" Width="170" DisplayMemberBinding="{Binding Path=ProductId}"/>
-                                <GridViewColumn Header="Category ID" Width="170" DisplayMemberBinding="{Binding Path=CategoryId}"/>
-                                <GridViewColumn Header="Product Name" Width="170" DisplayMemberBinding="{Binding Path=ProductName}"/>
-                                <GridViewColumn Header="Weight" Width="170" DisplayMemberBinding="{Binding Path=Weight}"/>
-                                <GridViewColumn Header="UnitPrice" Width="170" DisplayMemberBinding="{Binding Path=UnitPrice}"/>
-                                <GridViewColumn Header="UnitslnStock" Width="170" DisplayMemberBinding="{Binding Path=UnitslnStock}"/>
+                                <GridView.ColumnHeaderContainerStyle>
+                                    <Style TargetType="{x:Type GridViewColumnHeader}">
+                                        <Setter Property="Margin" Value="0,10,0,5"/>
+                                        <Setter Property="FontSize" Value="18"/>
+                                        <Setter Property="FontWeight" Value="Medium"/>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="Foreground" Value="#C62DAE"/>
+                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                    </Style>
+                                </GridView.ColumnHeaderContainerStyle>
+                                <!--Item-->
+                                <GridViewColumn Header="Product ID" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=ProductId}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Category ID" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=CategoryId}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Product Name" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=ProductName}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Weight" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=Weight}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="UnitPrice" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=UnitPrice}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="UnitslnStock" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=UnitslnStock}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
                             </GridView>
                         </ListView.View>
                     </ListView>
@@ -138,24 +199,63 @@
                             <ColumnDefinition Width="150"/>
                             <ColumnDefinition Width="150"/>
                         </Grid.ColumnDefinitions>
+                        
                         <Button x:Name="btnAdd" Style="{StaticResource controlButton}" Background="DarkKhaki"
                                 Width="70" Height="20" Grid.Column="0" Click="btnAdd_Click"  >
                             <fa:IconImage Icon="Add" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
                         </Button>
+                        
                         <Button x:Name="btnUpdate" Style="{StaticResource controlButton}" Background="DarkSeaGreen"
                                 Width="70" Height="20" Grid.Column="1" Click="btnUpdate_Click">
                             <fa:IconImage Icon="Upload" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
                         </Button>
+                        
                         <Button x:Name="btnDelete" Style="{StaticResource controlButton}" Background="DarkOrange"
                                Width="70" Height="20" Grid.Column="2" Click="btnDelete_Click">
                             <fa:IconImage Icon="Trash" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
                         </Button>
                     </Grid>
+                    <!--Text để dẫn-->
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_ProductId" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=ProductId, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
                     
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_Category" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=CategoryId, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                    
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_ProductName" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=ProductName, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                    
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_Weight" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=Weight, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                    
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_UnitPrice" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=UnitPrice, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                    
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_UnitStock" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=UnitslnStock, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+
                 </Grid>
-                
+
             </Border>
-            
+
         </Grid>
     </Border>
 

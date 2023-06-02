@@ -31,17 +31,17 @@ namespace SalesWPFApp
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            string account = txtAccount.Text;
-            string password = txtPass.Text;
-            if (_member.CheckLogin(account, password))
-            {
-                var pr= new Product(_product);
-                pr.Show();
-            }
-            else
-            {
-                MessageBox.Show("Fail");
-            }
+            //string account = txtAccount.Text;
+            //string password = txtPass.Text;
+            //if (_member.CheckLogin(account, password))
+            //{
+            //    var pr= new Product(_product);
+            //    pr.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Fail");
+            //}
         }
     }
 }

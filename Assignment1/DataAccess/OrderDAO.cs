@@ -44,7 +44,9 @@ namespace DataAccess
             if (oder != null)
             {
                 _context.Orders.Remove(oder);
-                return true;
+                var number = _context.SaveChanges();
+                if (number > 0)
+                    return true;
             }
             return false;
         }
@@ -53,7 +55,9 @@ namespace DataAccess
             if (oder != null)
             {
                 _context.Orders.Add(oder);
-                return true;
+                var number = _context.SaveChanges();
+                if (number > 0)
+                    return true;
             }
             return false;
         }
@@ -68,7 +72,9 @@ namespace DataAccess
                 check.ShippedDate=oder.ShippedDate;
                 check.Freight=oder.Freight;
                 _context.Orders.Update(check);
-                return true;
+                var number = _context.SaveChanges();
+                if (number > 0)
+                    return true;
             }
             return false;
         }

@@ -44,7 +44,9 @@ namespace DataAccess
             if (oder != null)
             {
                 _context.OrderDetails.Remove(oder);
-                return true;
+                var number = _context.SaveChanges();
+                if (number > 0)
+                    return true;
             }
             return false;
         }
@@ -53,7 +55,9 @@ namespace DataAccess
             if (oder != null)
             {
                 _context.OrderDetails.Add(oder);
-                return true;
+                var number = _context.SaveChanges();
+                if (number > 0)
+                    return true;
             }
             return false;
         }
@@ -68,7 +72,9 @@ namespace DataAccess
                 check.Quantity = oder.Quantity;
                 check.Discount = oder.Discount;
                 _context.OrderDetails.Update(check);
-                return true;
+                var number = _context.SaveChanges();
+                if (number > 0)
+                    return true;
             }
             return false;
         }

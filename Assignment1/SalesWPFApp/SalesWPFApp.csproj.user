@@ -13,10 +13,13 @@
     <Compile Update="LoginForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Product.xaml.cs">
+    <Compile Update="NodifyForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ProductForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UpdateProduct.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -30,7 +33,7 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Product.xaml">
+    <Page Update="NodifyForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ProductForm.xaml">
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\DataGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateProduct.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
