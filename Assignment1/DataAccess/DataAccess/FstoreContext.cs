@@ -58,7 +58,7 @@ public partial class FstoreContext : DbContext
             entity.Property(e => e.OrderDate).HasColumnType("datetime");
             entity.Property(e => e.RequiredDate).HasColumnType("datetime");
             entity.Property(e => e.ShippedDate).HasColumnType("datetime");
-
+            entity.Property(e => e.Status).HasColumnType("bit");
             entity.HasOne(d => d.Member).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.MemberId)
                 .HasConstraintName("FK__Order__MemberId__6477ECF3");

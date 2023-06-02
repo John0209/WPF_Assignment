@@ -22,12 +22,10 @@ namespace SalesWPFApp
     public partial class AddProduct : Window
     {
         IProductRepository _product;
-        ProductForm formPr;
         public AddProduct(IProductRepository product)
         {
             InitializeComponent();
             _product = product;
-            formPr = new ProductForm(_product,null);
             
         }
 
@@ -36,7 +34,6 @@ namespace SalesWPFApp
             Product product=GetProduct();
             if (_product.AddProduct(product))
             {
-                formPr.LoadListProduct();
                 var formNf = new NodifyForm();
                 formNf.textNodify($"Add {product.ProductName} Success, Please Reload!");
                 formNf.Show();

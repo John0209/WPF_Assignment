@@ -24,12 +24,14 @@ namespace SalesWPFApp
     {
         IMemberRepository _member;
         IProductRepository _product;
+        IOrderRepository _order;
         Member mem;
-        public MemberForm(IMemberRepository? member,IProductRepository? product)
+        public MemberForm(IMemberRepository? member,IProductRepository? product,IOrderRepository? order)
         {
             InitializeComponent();
             _member = member;
             _product = product;
+            _order = order;
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
         }
         public void LoadListMember()
@@ -108,14 +110,16 @@ namespace SalesWPFApp
 
         private void btnProduct_Checked(object sender, RoutedEventArgs e)
         {
-            var pr = new ProductForm(_product,_member);
+            var pr = new ProductForm(_product,_member,_order);
             pr.Show();
             pr.LoadListProduct();
         }
 
         private void btnOrder_Checked(object sender, RoutedEventArgs e)
         {
-
+            var pr = new OrderForm (_member,_product, _order);
+            pr.Show();
+            pr.LoadListOrder();
         }
 
         private void btnMember_Checked(object sender, RoutedEventArgs e)

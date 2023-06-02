@@ -17,7 +17,8 @@ namespace DataAccess.Repositories
 
         public Order? GetOrder(int id) => OrderDAO.Instance.GetOrderById(id);
 
-        public bool UpdateOrder(Order order) => OrderDAO.Instance.UpdateOrder(order);
+        public IEnumerable<Order> SearchOrder(int orId) => OrderDAO.Instance.SearchOrder(orId);
+        public bool UpdateOrder(Order order,bool mask) => OrderDAO.Instance.UpdateOrder(order,mask);
 
     }
 }

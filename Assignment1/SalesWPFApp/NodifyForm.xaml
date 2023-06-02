@@ -6,7 +6,7 @@
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:SalesWPFApp" xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
-         Title="NodifyForm" Height="200" Width="400" WindowStartupLocation="CenterScreen"
+         Title="NodifyForm" Height="210" Width="450" WindowStartupLocation="CenterScreen"
         WindowStyle="None" Background="Transparent" AllowsTransparency="True">
     <Border CornerRadius="10" BorderThickness="1" >
         <Border.BorderBrush>
@@ -56,7 +56,7 @@
                 </Border.Background>
                 <!--login button-->
                 <Button x:Name="btnShut"  BorderThickness="0" Content="CLOSE"
-                            Foreground="White" FontSize="12" FontFamily="Montserrat" Cursor="Hand" 
+                            Foreground="White" FontSize="13" FontFamily="Montserrat" Cursor="Hand" 
                             Grid.Column="2" Margin="0,0,0,0" Click="btnShut_Click">
                     <Button.Style>
                         <Style TargetType="Button">

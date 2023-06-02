@@ -31,6 +31,7 @@ namespace SalesWPFApp
             services.AddSingleton<NodifyForm>();
             services.AddSingleton<UpdateProduct>();
             services.AddSingleton<MemberForm>();
+            services.AddSingleton<OrderForm>();
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {

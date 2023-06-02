@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\App.xaml
-12-1835365089
+15-906922030
 
-11946472857
+14-1770425604
 2361721288951
-AddMemberForm.xaml;AddProduct.xaml;LoginForm.xaml;MainWindow.xaml;MemberForm.xaml;NodifyForm.xaml;ProductForm.xaml;Styles\ButtonStyles.xaml;Styles\Color.xaml;Styles\DataGrid.xaml;UpdateMemberForm.xaml;UpdateProduct.xaml;
+AddMemberForm.xaml;AddOrderForm.xaml;AddProduct.xaml;LoginForm.xaml;MainWindow.xaml;MemberForm.xaml;NodifyForm.xaml;OrderForm.xaml;ProductForm.xaml;Styles\ButtonStyles.xaml;Styles\Color.xaml;Styles\DataGrid.xaml;UpdateMemberForm.xaml;UpdateOrderForm.xaml;UpdateProduct.xaml;
 
 False
 

@@ -17,7 +17,9 @@ public partial class Order
 
     public decimal? Freight { get; set; }
 
+    public bool Status { get; set; }
     public virtual Member? Member { get; set; }
+
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 }

@@ -13,6 +13,7 @@ namespace DataAccess.Repositories
         public Order? GetOrder(int id);
         public bool AddOrder(Order order);
         public bool DeleteOrder(Order order);
-        public bool UpdateOrder(Order order);
+        public bool UpdateOrder(Order order,bool mask);
+        public IEnumerable<Order> SearchOrder(int orId);
     }
 }

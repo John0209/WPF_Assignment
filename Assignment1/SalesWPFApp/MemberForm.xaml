@@ -235,44 +235,44 @@
                     <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
                           x:Name="txt_MemberId" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
                               FontSize="5" BorderBrush="#231457"
-                             Text="{Binding Path=ProductId, Mode=OneWay}"
-                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                             Text="{Binding Path=MemberId, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvMember,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
 
                     <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
                           x:Name="txt_Email" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
                               FontSize="5" BorderBrush="#231457"
-                             Text="{Binding Path=CategoryId, Mode=OneWay}"
-                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                             Text="{Binding Path=Email, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvMember,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
 
                     <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
                           x:Name="txt_CompanyName" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
                               FontSize="5" BorderBrush="#231457"
-                             Text="{Binding Path=ProductName, Mode=OneWay}"
-                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                             Text="{Binding Path=CompanyName, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvMember,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
 
                     <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
                           x:Name="txt_City" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
                               FontSize="5" BorderBrush="#231457"
-                             Text="{Binding Path=Weight, Mode=OneWay}"
-                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                             Text="{Binding Path=City, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvMember,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
 
                     <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
                           x:Name="txt_Country" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
                               FontSize="5" BorderBrush="#231457"
-                             Text="{Binding Path=UnitPrice, Mode=OneWay}"
-                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                             Text="{Binding Path=Country, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvMember,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
 
                     <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
                           x:Name="txt_Password" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
                               FontSize="5" BorderBrush="#231457"
-                             Text="{Binding Path=UnitslnStock, Mode=OneWay}"
-                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                             Text="{Binding Path=Password, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvMember,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
 
                     <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
                           x:Name="txt_StatusMember" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
                               FontSize="5" BorderBrush="#231457"
                              Text="{Binding Path=Status, Mode=OneWay}"
-                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+                        DataContext="{Binding ElementName=lvMember,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
 
                 </Grid>
 

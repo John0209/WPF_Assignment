@@ -10,6 +10,9 @@
     <Compile Update="AddMemberForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="AddOrderForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AddProduct.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,10 +25,16 @@
     <Compile Update="NodifyForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="OrderForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ProductForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UpdateMemberForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UpdateOrderForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UpdateProduct.xaml.cs">
@@ -34,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="AddMemberForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddOrderForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AddProduct.xaml">
@@ -51,6 +63,9 @@
     <Page Update="NodifyForm.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="OrderForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ProductForm.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -64,6 +79,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UpdateMemberForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateOrderForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UpdateProduct.xaml">

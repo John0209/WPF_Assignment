@@ -24,11 +24,13 @@ namespace SalesWPFApp
     {
         IMemberRepository _member;
         IProductRepository _product;
-        public LoginForm(IMemberRepository memberRepository, IProductRepository product)
+        IOrderRepository _order;
+        public LoginForm(IMemberRepository memberRepository, IProductRepository product, IOrderRepository? order)
         {
             InitializeComponent();
             _member = memberRepository;
             _product = product;
+            _order = order;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -55,7 +57,7 @@ namespace SalesWPFApp
             string password = txtPass.Password;
             if (_member.CheckLogin(account, password))
             {
-                var pr = new ProductForm(_product,_member);
+                var pr = new ProductForm(_product,_member,_order);
                 pr.Show();
             }
             else

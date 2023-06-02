@@ -15,5 +15,6 @@ namespace DataAccess.Repositories
         public bool DeleteProduct(Product product);
         public bool UpdateProduct(Product product,bool mask);
         public IEnumerable<Product> SearchProduct(string name);
+
     }
 }
