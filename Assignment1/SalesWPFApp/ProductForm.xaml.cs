@@ -25,12 +25,14 @@ namespace SalesWPFApp
     public partial class ProductForm : Window
     {
         IProductRepository _product;
+        IMemberRepository _member;
         Product pr;
         //Product m_product;
-        public ProductForm(IProductRepository product)
+        public ProductForm(IProductRepository? product,IMemberRepository? member)
         {
             InitializeComponent();
             _product = product;
+            _member= member;
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
         }
       
@@ -61,7 +63,9 @@ namespace SalesWPFApp
 
         private void btnMember_Checked(object sender, RoutedEventArgs e)
         {
-
+            var member = new MemberForm(_member,_product);
+            member.Show();
+            member.LoadListMember();
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

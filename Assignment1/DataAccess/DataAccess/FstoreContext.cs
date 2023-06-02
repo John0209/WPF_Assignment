@@ -42,6 +42,7 @@ public partial class FstoreContext : DbContext
                 .HasMaxLength(15)
                 .IsUnicode(false);
             entity.Property(e => e.Email).HasMaxLength(100);
+            entity.Property(e => e.Status).HasColumnType("bit");
             entity.Property(e => e.Password)
                 .HasMaxLength(30)
                 .IsUnicode(false);

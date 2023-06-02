@@ -24,11 +24,13 @@ namespace SalesWPFApp
         {
             services.AddSingleton(typeof(IMemberRepository),typeof(MemberRepository));
             services.AddSingleton(typeof(IProductRepository), typeof(ProductRepository));
+            services.AddSingleton(typeof(IOrderRepository), typeof(OrderRepository));
             services.AddSingleton<LoginForm>();
             services.AddSingleton<ProductForm>();
             services.AddSingleton<AddProduct>();
             services.AddSingleton<NodifyForm>();
             services.AddSingleton<UpdateProduct>();
+            services.AddSingleton<MemberForm>();
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {
@@ -37,7 +39,8 @@ namespace SalesWPFApp
             var addPage = serviceProvider.GetService< AddProduct>();
             var nodifyPage = serviceProvider.GetService<NodifyForm>();
             var updatePage = serviceProvider.GetService<UpdateProduct>();
-            productPage.Show();
+            var memberPage = serviceProvider.GetService<MemberForm>();
+            memberPage.Show();
         }
 
     }

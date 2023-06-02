@@ -4,9 +4,281 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SalesWPFApp"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
-        Title="MemberForm" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MemberForm" Height="700" Width="1300" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+
+    <Border CornerRadius="10" BorderThickness="1" >
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#462AD8" Offset="0"/>
+                <GradientStop Color="#DA34AE" Offset="0.75"/>
+                <GradientStop Color="#8A16C1" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--Navigation menu-->
+                <ColumnDefinition Width="250"/>
+                <!--Content section-->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Navigation menu-->
+            <Border CornerRadius="10,0,0,10" Grid.Column="0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
+                        <GradientStop Color="#281663" Offset="0"/>
+                        <GradientStop Color="#231457" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel>
+                    <!--Logo-->
+                    <StackPanel Orientation="Horizontal" Height="35" Margin="15,25,0,40">
+                        <Image Source="/Images/logo.png" Height="30"/>
+                        <TextBlock Text="JUICE" Foreground="WhiteSmoke" FontSize="20" FontFamily="Montserrat"
+                                   FontWeight="Medium" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <!--Menu button-->
+                    <RadioButton Style="{StaticResource menuButton}" Tag= "#8287ff" x:Name="btnDashboard" Checked="btnDashboard_Checked">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}" Tag="#40cef1" x:Name="btnProduct" Checked="btnProduct_Checked">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="ProductHunt" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Product" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}" Tag="#E285DE" x:Name="btnOrder" Checked="btnOrder_Checked">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="MoneyBill1Wave" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Order" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}" Tag="#ffbd43" x:Name="btnMember" Checked="btnMember_Checked">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="PeopleGroup" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Member" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+
+                </StackPanel>
+            </Border>
+            <!--Main section-->
+            <Border CornerRadius="0,10,10,0" Grid.Column="1">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                        <GradientStop Color="#0a0441" Offset="0"/>
+                        <GradientStop Color="#1d114e" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--Control bar-->
+                    <StackPanel x:Name="pnlControlBar" Grid.Row="0" Orientation="Horizontal" FlowDirection="RightToLeft"
+                                Background="Transparent" Margin="0,0,5,0" MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown">
+
+                        <Button x:Name="btnClose" Style="{StaticResource controlButton}"  Margin="0,0,15,0" 
+                                Tag="PaleVioletRed" Click="btnClose_Click">
+                            <fa:IconImage Icon="Xmark" Style="{StaticResource controlButtonIcon}"/>
+                        </Button>
+
+                        <Button x:Name="btnMaximize" Style="{StaticResource controlButton}"  Margin="0,0,15,0" 
+                                Tag="#ffbd43" Click="btnMaximize_Click">
+                            <fa:IconImage Icon="Square" Style="{StaticResource controlButtonIcon}"/>
+                        </Button>
+
+                        <Button x:Name="btnMinimize" Style="{StaticResource controlButton}" 
+                                Tag="#28AEED" Click="btnMinimize_Click">
+                            <fa:IconImage Icon="WindowMinimize" Style="{StaticResource controlButtonIcon}" Width="12"/>
+                        </Button>
+                    </StackPanel>
+                    <!--List View-->
+                    <!--<DataGrid Grid.Row="3" x:Name="lvProduct" Background="White" IsReadOnly="True"
+                              Margin="10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Product ID" Width="170" Binding="{Binding Path=ProductId}"/>
+                            <DataGridTextColumn Header="Category ID" Width="170" Binding="{Binding Path=CategoryId}"/>
+                            <DataGridTextColumn Header="Product Name" Width="170" Binding="{Binding Path=ProductName}"/>
+                            <DataGridTextColumn Header="Weight" Width="170" Binding="{Binding Path=Weight}"/>
+                            <DataGridTextColumn Header="UnitPrice" Width="170" Binding="{Binding Path=UnitPrice}"/>
+                            <DataGridTextColumn Header="UnitslnStock" Width="170" Binding="{Binding Path=UnitslnStock}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>-->
+                    <ListView Grid.Row="3" x:Name="lvMember" Background="Transparent" FontSize="14" FontWeight="Medium"
+                              FontFamily="Montserrat" HorizontalAlignment="Center" Margin="10" BorderThickness="2" BorderBrush="#462AD8"
+                              >
+
+                        <ListView.View >
+                            <GridView>
+                                <GridView.ColumnHeaderContainerStyle>
+                                    <Style TargetType="{x:Type GridViewColumnHeader}">
+                                        <Setter Property="Margin" Value="0,10,0,5"/>
+                                        <Setter Property="FontSize" Value="18"/>
+                                        <Setter Property="FontWeight" Value="Medium"/>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="Foreground" Value="#C62DAE"/>
+                                        <Setter Property="BorderBrush" Value="Transparent"/>
+                                    </Style>
+                                </GridView.ColumnHeaderContainerStyle>
+                                <!--Item-->
+                                <GridViewColumn Header="MemberId" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=MemberId}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Email" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=Email}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="CompanyName" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=CompanyName}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="City" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=City}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Country" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=Country}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Password" Width="170">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=Password}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <!--Button Function-->
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button x:Name="btnAddMember" Style="{StaticResource controlButton}" Background="Tomato"
+                                Width="70" Height="20" Grid.Column="0" Click="btnAddMember_Click">
+                            <fa:IconImage Icon="Add" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
+                        </Button>
+
+                        <Button x:Name="btnUpdate" Style="{StaticResource controlButton}" Background="DarkSeaGreen"
+                                Width="70" Height="20" Grid.Column="1" Click="btnUpdate_Click">
+                            <fa:IconImage Icon="Upload" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
+                        </Button>
+
+                        <Button x:Name="btnDelete" Style="{StaticResource controlButton}" Background="DarkOrange"
+                               Width="70" Height="20" Grid.Column="2" Click="btnDelete_Click">
+                            <fa:IconImage Icon="Trash" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
+                        </Button>
+
+                        <Button x:Name="btnLoad" Style="{StaticResource controlButton}" Background="DarkTurquoise"
+                               Width="70" Height="20" Grid.Column="3" Click="btnLoad_Click">
+                            <fa:IconImage Icon="ArrowRotateLeft" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
+                        </Button>
+
+                        <StackPanel  Grid.Column="4">
+                            <TextBox  Background="Wheat" FontSize="14" Margin="0,5,98,0" Width="270" Height="20" Foreground="#1d114e"
+                                      FontFamily="Montserrat" FontWeight="Medium" BorderBrush="#DA34AE" BorderThickness="2" x:Name="txtSearchMem"/>
+                            <Button x:Name="btnSearch" Style="{StaticResource controlButton}" Background="Violet"
+                               Width="50" Height="20" Grid.Column="3" Click="btnSearch_Click" Margin="340,-20,98,0">
+                                <fa:IconImage Icon="Search" Style="{StaticResource buttonFunction}" Width="43" Height="15"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                    <!--Text để dẫn-->
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_MemberId" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=ProductId, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_Email" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=CategoryId, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_CompanyName" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=ProductName, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_City" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=Weight, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_Country" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=UnitPrice, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_Password" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=UnitslnStock, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+
+                    <TextBox  HorizontalAlignment="Left" Margin="-237,373,0,0"
+                          x:Name="txt_StatusMember" VerticalAlignment="Top" Foreground= "#231457" Background="#231457" 
+                              FontSize="5" BorderBrush="#231457"
+                             Text="{Binding Path=Status, Mode=OneWay}"
+                        DataContext="{Binding ElementName=lvProduct,Path=SelectedItem}" Grid.Row="2" Width="10" Height="26"/>
+
+                </Grid>
+
+            </Border>
+
+        </Grid>
+    </Border>
+
 </Window>

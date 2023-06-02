@@ -27,7 +27,7 @@ namespace SalesWPFApp
         {
             InitializeComponent();
             _product = product;
-            formPr = new ProductForm(_product);
+            formPr = new ProductForm(_product,null);
             
         }
 

@@ -33,7 +33,8 @@ public class MemberDAO
         var result= _context.Members.ToList();
         if(result.Count>0 )
         {
-            return result;
+            var listMember = from p in result where p.Status == true select p;
+            return listMember;
         }
         return null;
     }
