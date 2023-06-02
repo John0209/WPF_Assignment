@@ -53,24 +53,37 @@ public class MemberDAO
     {
         if(member != null)
         {
-            _context.Members.Add(member);
+            var mem= new Member();
+            mem.Email=member.Email;
+            mem.CompanyName=member.CompanyName;
+            mem.City=member.City;
+            mem.Country=member.Country;
+            mem.Password=member.Password;
+            mem.Status=true;
+            _context.Members.Add(mem);
             var number = _context.SaveChanges();
             if (number > 0)
                 return true;
         }
         return false;
     }
-    public bool UpdateMember(Member member)
+    public bool UpdateMember(Member member, bool mask)
     {
         var id = member.MemberId;
         var checkMember=GetMemberById(id);
         if(checkMember!=null)
         {
+            if (mask) { 
             checkMember.Email= member.Email;
             checkMember.CompanyName= member.CompanyName;
             checkMember.City= member.City;
             checkMember.Country= member.Country;
             checkMember.Password= member.Password;
+            }
+            else
+            {
+            checkMember.Status = false;
+            }
             _context.Members.Update(checkMember);
             var number = _context.SaveChanges();
             if (number > 0)
@@ -98,4 +111,12 @@ public class MemberDAO
         }
         return false;
     }
+    public IEnumerable<Member> SearchMember(string name)
+    {
+        var memberList = GetMembers();
+        var list = from p in memberList where p.Email == name || p.Country==name || p.CompanyName==name
+                   || p.City==name select p;
+        return list;
+    }
+
 }

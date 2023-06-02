@@ -40,7 +40,7 @@ namespace SalesWPFApp
             var nodifyPage = serviceProvider.GetService<NodifyForm>();
             var updatePage = serviceProvider.GetService<UpdateProduct>();
             var memberPage = serviceProvider.GetService<MemberForm>();
-            memberPage.Show();
+            productPage.Show();
         }
 
     }

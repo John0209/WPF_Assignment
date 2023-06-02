@@ -174,8 +174,8 @@
                                 <GridViewColumn Header="UnitPrice" Width="170">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Text="{Binding Path=UnitPrice}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
-                                                       Margin="0,8,0,8" Cursor="Hand" Width="300"/>
+                                            <TextBlock Text="{Binding Path=UnitPrice,StringFormat={}{0:#,#}}" FontSize="15" Foreground="DarkOrange" TextAlignment="Center" HorizontalAlignment="Center"
+                                                       Margin="0,8,0,8" Cursor="Hand" Width="300" />
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>

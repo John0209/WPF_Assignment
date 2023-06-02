@@ -21,7 +21,9 @@ namespace DataAccess.Repositories
 
         public Member? GetMember(int id) => MemberDAO.Instance.GetMemberById(id);
 
-        public bool UpdateMember(Member member) => MemberDAO.Instance.UpdateMember(member);
+        public IEnumerable<Member> SearchMember(string name) => MemberDAO.Instance.SearchMember(name);
+        public bool UpdateMember(Member member, bool mask) => MemberDAO.Instance.UpdateMember(member,mask);
+
 
     }
 }

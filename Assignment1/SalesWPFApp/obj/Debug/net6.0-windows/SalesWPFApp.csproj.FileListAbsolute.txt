@@ -145,3 +145,7 @@ D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\Updat
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\UpdateProduct.baml
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\MemberForm.g.cs
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\MemberForm.baml
+D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\AddMemberForm.g.cs
+D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\AddMemberForm.baml
+D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\UpdateMemberForm.g.cs
+D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\UpdateMemberForm.baml

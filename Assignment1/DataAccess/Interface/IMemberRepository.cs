@@ -13,7 +13,8 @@ namespace DataAccess.Repositories
         public Member? GetMember(int id);
         public bool AddMember(Member member);
         public bool DeleteMember(Member member);
-        public bool UpdateMember(Member member);
+        public bool UpdateMember(Member member,bool mask);
         public bool CheckLogin(string email, string password);
+        public IEnumerable<Member> SearchMember(string name);
     }
 }

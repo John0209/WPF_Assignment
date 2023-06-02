@@ -1,5 +1,6 @@
 ﻿using DataAccess.DataAccess;
 using DataAccess.Repositories;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace SalesWPFApp
     {
         IMemberRepository _member;
         IProductRepository _product;
+        Member mem;
         public MemberForm(IMemberRepository? member,IProductRepository? product)
         {
             InitializeComponent();
@@ -62,17 +64,40 @@ namespace SalesWPFApp
 
         private void btnAddMember_Click(object sender, RoutedEventArgs e)
         {
-
+            var member =new AddMemberForm(_member);
+            member.Show();
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-
+            UpdateMemberForm m_update = new UpdateMemberForm(_member);
+            GetDataMember();
+            //excute
+            m_update.GetMemberInforDisplay(mem);
+            m_update.Show();
+        }
+        private void GetDataMember()
+        {
+            mem = new Member();
+            //get data
+            mem.MemberId=int.Parse(txt_MemberId.Text);
+            mem.Email=txt_Email.Text;
+            mem.City=txt_City.Text;
+            mem.Country=txt_Country.Text;
+            mem.CompanyName=txt_CompanyName.Text;
+            mem.Password=txt_Password.Text;
+            mem.Status= Boolean.Parse(txt_StatusMember.Text);
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            GetDataMember();
+            if (_member.UpdateMember(mem, false))
+            {
+                var formNf = new NodifyForm();
+                formNf.textNodify($"Delete {mem.Email} Success, Please Reload!");
+                formNf.Show();
+            }
         }
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)
@@ -104,17 +129,17 @@ namespace SalesWPFApp
         }
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            //var pr = _product.SearchProduct(txtSearch.Text);
-            //if (pr.IsNullOrEmpty())
-            //{
-            //    var formNf = new NodifyForm();
-            //    formNf.textNodify($"{txtSearch.Text} does not exist!");
-            //    formNf.Show();
-            //}
-            //else
-            //{
-            //    lvProduct.ItemsSource = pr;
-            //}
+            var pr = _member.SearchMember(txtSearchMem.Text);
+            if (pr.IsNullOrEmpty())
+            {
+                var formNf = new NodifyForm();
+                formNf.textNodify($"{txtSearchMem.Text} does not exist!");
+                formNf.Show();
+            }
+            else
+            {
+                lvMember.ItemsSource = pr;
+            }
         }
     }
 }
