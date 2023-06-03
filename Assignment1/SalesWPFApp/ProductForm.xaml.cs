@@ -45,7 +45,8 @@ namespace SalesWPFApp
 
         private void btnDashboard_Checked(object sender, RoutedEventArgs e)
         {
-
+            var dash = new DashboardForm(_product, _member, _order);
+            dash.Show();
         }
 
         private void btnProduct_Checked(object sender, RoutedEventArgs e)

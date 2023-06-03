@@ -57,12 +57,14 @@ namespace SalesWPFApp
             string password = txtPass.Password;
             if (_member.CheckLogin(account, password))
             {
-                var pr = new ProductForm(_product,_member,_order);
+                var pr = new DashboardForm(_product,_member,_order);
                 pr.Show();
             }
             else
             {
-                MessageBox.Show("Fail");
+                var formNf = new NodifyForm();
+                formNf.textNodify($"Account Or Password Wrong, Please Login Again!");
+                formNf.Show();
             }
         }
 

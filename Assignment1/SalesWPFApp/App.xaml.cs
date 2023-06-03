@@ -32,6 +32,7 @@ namespace SalesWPFApp
             services.AddSingleton<UpdateProduct>();
             services.AddSingleton<MemberForm>();
             services.AddSingleton<OrderForm>();
+            services.AddSingleton<DashboardForm>();
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {
@@ -41,7 +42,8 @@ namespace SalesWPFApp
             var nodifyPage = serviceProvider.GetService<NodifyForm>();
             var updatePage = serviceProvider.GetService<UpdateProduct>();
             var memberPage = serviceProvider.GetService<MemberForm>();
-            productPage.Show();
+            var dashboardPage = serviceProvider.GetService<DashboardForm>();
+            loginPage.Show();
         }
 
     }

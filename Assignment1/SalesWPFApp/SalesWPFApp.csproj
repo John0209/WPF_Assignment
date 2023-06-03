@@ -12,6 +12,7 @@
     <None Remove="Images\fruit.jpg" />
     <None Remove="Images\juice.jpg" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\violet.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +40,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\violet.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

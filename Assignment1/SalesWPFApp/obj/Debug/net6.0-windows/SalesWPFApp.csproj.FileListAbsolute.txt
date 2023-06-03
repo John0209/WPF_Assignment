@@ -155,3 +155,5 @@ D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\AddOr
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\UpdateOrderForm.g.cs
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\AddOrderForm.baml
 D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\UpdateOrderForm.baml
+D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\DashboardForm.g.cs
+D:\Code C#\WPF_Assignment\Assignment1\SalesWPFApp\obj\Debug\net6.0-windows\DashboardForm.baml
